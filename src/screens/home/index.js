@@ -9,7 +9,10 @@ import {
   Left,
   Right,
   Body,
-  Title
+  Title,
+  Tabs,
+  TabHeading,
+  Tab
 } from "native-base";
 
 class HomeScreen extends Component {
@@ -27,8 +30,21 @@ class HomeScreen extends Component {
           </Body>
           <Right/>
         </Header>
-        <Content padder>
-          <Text>Main pane</Text>
+        <Content style={{ flex: 1 }} contentContainerStyle={{ flexGrow: 1 }}>
+          <Tabs tabBarPosition="bottom">
+            <Tab heading={ <TabHeading><Icon name="ios-folder-open" /></TabHeading> }>
+              <Content padder><Text>Files</Text></Content>
+            </Tab>
+            <Tab heading={ <TabHeading><Icon name="ios-images" /></TabHeading> }>
+              <Content padder><Text>Gallery</Text></Content>
+            </Tab>
+            <Tab heading={ <TabHeading><Icon name="ios-create" /></TabHeading> }>
+              <Content padder><Text>Notes</Text></Content>
+            </Tab>
+            <Tab heading={ <TabHeading><Icon name="ios-globe" /></TabHeading> }>
+              <Content padder><Text>Browser</Text></Content>
+            </Tab>
+          </Tabs>
         </Content>
       </Container>
     );
