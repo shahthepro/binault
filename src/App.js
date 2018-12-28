@@ -5,7 +5,7 @@ import HomeScreen from "./screens/home";
 
 export default () =>
   <Root>
-    <Drawer type="displace" ref={(ref) => { this.drawer = ref; }} content={<SideBar />} panOpenMask={0.2}>
+    <Drawer type="displace" ref={(ref) => { this.drawer = ref; }} content={<SideBar />} panOpenMask={0.99}>
       <HomeScreen openDrawer={() => this.drawer._root.open()} />
     </Drawer>
   </Root>;

@@ -12,6 +12,7 @@ import {
   Title,
   Tabs,
   TabHeading,
+  ListItem,
   Tab
 } from "native-base";
 
@@ -31,7 +32,7 @@ class HomeScreen extends Component {
           <Right/>
         </Header>
         <Content style={{ flex: 1 }} contentContainerStyle={{ flexGrow: 1 }}>
-          <Tabs tabBarPosition="bottom">
+          <Tabs tabBarPosition="bottom" locked={ true }>
             <Tab heading={ <TabHeading><Icon name="ios-folder-open" /></TabHeading> }>
               <Content padder><Text>Files</Text></Content>
             </Tab>
